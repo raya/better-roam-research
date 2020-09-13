@@ -1,0 +1,60 @@
+@mixin tag($bgColor, $color: white) {
+  font-weight: 500;
+  background: $bgColor !important;
+  color: $color !important;
+}
+
+// modified Maggie Appleton's theme
+span.rm-page-ref-tag {
+  border-radius: 2px;
+  padding: 3px 7px;
+  line-height: 2em;
+  background: rgba(16,107,163, 0.25);
+  color: hsl(206,23%,13%);
+}
+
+.content span.rm-page-ref {
+  padding: 4px 1px 1px;
+  /* required for fixing azo */
+}
+
+span.rm-page-ref-tag[data-tag="article"] {
+  @include tag(#19647E);
+}
+
+span.rm-page-ref-tag[data-tag="books"] {
+  @include tag(#F4D35E, black);
+}
+
+span.rm-page-ref-tag[data-tag="evergreen"] {
+  @include tag(#4CE0D2);
+}
+
+span.rm-page-ref-tag[data-tag="Quotes"] {
+  @include tag(#FCB815);
+}
+
+span.rm-page-ref-tag[data-tag="Reading"] {
+  @include tag(#EE5F85);
+}
+
+span.rm-page-ref-tag[data-tag="reread"] {
+  @include tag(#FF7D00);
+}
+
+span.rm-page-ref-tag[data-tag="Tweets"] {
+  @include tag(#0DBAC6);
+}
+
+// Project
+span.rm-page-ref-tag[data-tag="project"] {
+  @include tag(#84CAE7);
+}
+
+span.rm-page-ref-tag[data-tag="in progress"] {
+  @include tag(#EE5F85);
+}
+
+span.rm-page-ref-tag[data-tag="done"] {
+  @include tag(#A71D31);
+}
