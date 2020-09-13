@@ -131,14 +131,17 @@ div.roam-article span > a:not(.rm-alias-page):after {
   position: relative;
   bottom: -2px;
   left: -1px; }
+
 div.roam-article .rm-level1 span > a:not(.rm-alias-page):after {
   background-size: 20px 20px;
   width: 20px;
   height: 20px; }
+
 div.roam-article .rm-level2 span > a:not(.rm-alias-page):after {
   background-size: 18px 18px;
   width: 18px;
   height: 18px; }
+
 div.roam-article .rm-level3 span > a:not(.rm-alias-page):after {
   background-size: 16px 16px;
   width: 16px;
@@ -270,6 +273,7 @@ span.checkmark {
 
 .starred-pages-wrapper > div:first-child {
   display: none; }
+
 .starred-pages-wrapper .flex-h-box,
 .starred-pages-wrapper .flex-h-box span {
   font-size: 13px !important;
@@ -278,8 +282,10 @@ span.checkmark {
 .roam-body .roam-app .roam-sidebar-container .roam-sidebar-content .log-button,
 .roam-body .roam-app .roam-sidebar-container .roam-sidebar-content .starred-pages-wrapper .starred-pages .page {
   padding: 6px 24px 6px !important; }
+
 .roam-body .roam-app .roam-sidebar-container .roam-sidebar-content .shortcut {
   padding: 14px 24px 0; }
+
 .roam-body .roam-app .roam-sidebar-container .roam-sidebar-content .top-row {
   padding: 12px 0 0 20px; }
   .roam-body .roam-app .roam-sidebar-container .roam-sidebar-content .top-row:hover {
@@ -338,10 +344,8 @@ span.checkmark {
     --popup-background-color: hsl(0, 0%, 14%);
     --brackets-color: rgba(255, 255, 255, 0.3);
     --empty-text-color: hsl(203, 5%, 70%); }
-
   .roam-highlight,
   .block-highlight-yellow {
     background-color: #5a5016 !important; }
-
   .bp3-overlay-backdrop {
     background-color: rgba(0, 0, 0, 0.7) !important; } }

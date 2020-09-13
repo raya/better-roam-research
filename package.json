@@ -1,0 +1,23 @@
+{
+  "name": "better-roam-research",
+  "version": "1.0.0",
+  "description": "This is one of the most popular **minimal themes** for [Roam Research](https://roamresearch.com), with system-level **Dark Mode** support.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "node-sass ./main.scss ./main.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/raya/better-roam-research.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/raya/better-roam-research/issues"
+  },
+  "homepage": "https://github.com/raya/better-roam-research#readme",
+  "dependencies": {
+    "node-sass": "^4.14.1"
+  }
+}
