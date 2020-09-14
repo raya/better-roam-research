@@ -1,60 +1,39 @@
 @mixin tag($bgColor, $color: white) {
-  font-weight: 500;
   background: $bgColor !important;
   color: $color !important;
+  font-weight: 500;
+  border-radius: 2px;
+  padding: 3px 7px;
+  line-height: 2em;
 }
 
 // modified Maggie Appleton's theme
 span.rm-page-ref-tag {
-  border-radius: 2px;
-  padding: 3px 7px;
-  line-height: 2em;
-  background: rgba(16,107,163, 0.25);
-  color: hsl(206,23%,13%);
+  color: #40376E;
 }
 
 .content span.rm-page-ref {
-  padding: 4px 1px 1px;
-  /* required for fixing azo */
+  padding: 4px 1px 1px; /* required for fixing azo */
 }
 
-span.rm-page-ref-tag[data-tag="article"] {
-  @include tag(#19647E);
-}
+$tagColors: (
+  "Articles": (#19647E, #fff),
+  "Books": (#F4D35E, #fff),
+  "Evergreen": (#4CE0D2, #fff),
+  "Inbox": (#F2545B, #fff),
+  "Quotes": (#FCB815, #fff),
+  "Project": (#2F52E0, #fff),
+  "Tweets": (#1E91D6, #fff),
 
-span.rm-page-ref-tag[data-tag="books"] {
-  @include tag(#F4D35E, black);
-}
+  "reading": (#F5F1E3, #000),
+  "in progress": (#F5F1E3, #000),
+  "done": (#F5F1E3, #000),
+);
 
-span.rm-page-ref-tag[data-tag="evergreen"] {
-  @include tag(#4CE0D2);
-}
-
-span.rm-page-ref-tag[data-tag="Quotes"] {
-  @include tag(#FCB815);
-}
-
-span.rm-page-ref-tag[data-tag="Reading"] {
-  @include tag(#EE5F85);
-}
-
-span.rm-page-ref-tag[data-tag="reread"] {
-  @include tag(#FF7D00);
-}
-
-span.rm-page-ref-tag[data-tag="Tweets"] {
-  @include tag(#0DBAC6);
-}
-
-// Project
-span.rm-page-ref-tag[data-tag="project"] {
-  @include tag(#84CAE7);
-}
-
-span.rm-page-ref-tag[data-tag="in progress"] {
-  @include tag(#EE5F85);
-}
-
-span.rm-page-ref-tag[data-tag="done"] {
-  @include tag(#A71D31);
+@each $name, $colors in $tagColors {
+  span.rm-page-ref-tag[data-tag="#{$name}"] {
+    $bgColor: nth($colors, 1);
+    $color: nth($colors, 2);
+    @include tag($bgColor, $color)
+  }
 }
