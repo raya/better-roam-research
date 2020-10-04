@@ -3,6 +3,7 @@
   --font-color: hsl(205, 23%, 16%);
   --font-color-lighter: hsl(0, 0%, 40%);
   --font-color-placeholder: hsl(0, 0%, 70%);
+  --font-color-secondary: #d35400;
   --link-color: hsl(203, 82%, 35%);
   --selection-color: hsl(203, 100%, 74%);
   --ref-hover-bg-color: hsl(204, 33%, 97%);
@@ -22,8 +23,17 @@ body,
 .roam-body,
 .roam-app,
 .rm-pages-title-text,
-.bp3-button {
+{
   color: var(--font-color) !important;
+}
+
+.bp3-button {
+  color: var(--font-color-secondary) !important;
+  font-size: 90%;
+
+  &.block-ref-count-button {
+    color: var(--font-color) !important;
+  }
 }
 
 html,
@@ -301,10 +311,6 @@ span.checkmark {
   }
 }
 
-.bp3-button {
-  color: var(--font-color-lighter) !important;
-}
-
 // Overrides to dark theme text, for popovers that remain white
 .bp3-popover-content {
   div > div > .flex-h-box div > div > span,
@@ -318,12 +324,12 @@ span.checkmark {
   color: #182026 !important;
 }
 
-.rm-block-ref {
-  &:hover {
-    background: var(--ref-hover-bg-color) !important;
-  }
-  border-bottom: 0.5px solid var(--border-color) !important;
-}
+//.rm-block-ref {
+//  &:hover {
+//    background: var(--ref-hover-bg-color) !important;
+//  }
+//  border-bottom: 0.5px solid var(--border-color) !important;
+//}
 
 .CodeMirror {
   font-size: 13px !important;
@@ -490,4 +496,26 @@ span.checkmark {
   .rm-embed-container {
     background-color: #2b3033 !important;
   }
+}
+
+// Copied form Leyendecker theme
+.rm-block-ref::before {
+  content: '';
+  display: inline-block;
+  width: 2px;
+  border-radius: 40px;
+  height: 12px;
+  background: #ff913c;
+  margin-right: 8px;
+  text-decoration: none;
+}
+.rm-block-ref {
+  border-bottom: none;
+  font-size: 1em;
+  color: var(--text-color);
+}
+.rm-block-ref:hover {
+  background: none;
+  cursor: pointer;
+  text-decoration: none;
 }
